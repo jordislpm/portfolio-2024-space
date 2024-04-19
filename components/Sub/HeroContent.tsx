@@ -3,8 +3,8 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utilities/motion'
 import { SparklesIcon } from '@heroicons/react/24/solid'
-import TypingAnimationAbout from '../Typing-animation-about/TypingAnimationAbout'
 import Image from 'next/image'
+import TypingAnimation from '../TypingAnimation/TypingAnimation'
 
 function HeroContent() {
     return (
@@ -30,7 +30,14 @@ function HeroContent() {
                     <span>
                     Providing <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'
                     >the best </span>
-                    <TypingAnimationAbout/>
+                    <TypingAnimation 
+                    textOptions={[
+                        "project experience",
+                        'as a React developer',
+                        'as a fullstack "MERN" developer'
+                    ]}
+                    time={1000}
+                    className='text-4xl text-bold text-white block'/>
                     </span>
                     
                 </motion.div>

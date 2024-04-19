@@ -3,6 +3,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utilities/motion'
 import { SparklesIcon } from '@heroicons/react/24/solid'
+import TypingAnimation from '../TypingAnimation/TypingAnimation'
 
 const SkillText = () => {
   return (
@@ -26,7 +27,11 @@ const SkillText = () => {
         variants={slideInFromRight(0.5)}
         className='text-[30px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10 mt-[10px] text-center'
         >
-            Never miss a task, deadline or idea
+            <TypingAnimation
+            className='text-[30px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10 mt-[10px] text-center'
+            time={2000}
+            textOptions={["Never miss a task", "Never miss a deadline", "Never miss a idea"]}
+            />
         </motion.div>
     </div>
   )

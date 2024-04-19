@@ -20,3 +20,9 @@ export interface typeProjectCard{
 export interface typeMyProjects{
    data: typeProjectCard[];
 }
+
+export interface typesTypingAnimation{
+    textOptions: string[]
+    time: number;
+    className: string
+}

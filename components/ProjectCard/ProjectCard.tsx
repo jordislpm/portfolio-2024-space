@@ -5,12 +5,12 @@ import Image from 'next/image'
 
 function ProjectCard({ src, title, description }: typeProjectCard) {
     return (
-        <div className='relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]'>
+        <div className='relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] max-w-500'>
             <Image
                 src={src}
                 alt={title}
-                width={1000}
-                height={1000}
+                width={800}
+                height={800}
                 className="w-full object-contain"
             />
 

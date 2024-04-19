@@ -2,10 +2,10 @@ import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import React from "react";
 import { typeMyProjects } from "@/types";
 import { myProjects } from "@/constants/projects";
-import CardAnimated from "@/components/CardAnimated/CardAnimated";
 
 
-function Projects (){
+
+function Projects() {
   return (
     <section
       className="flex flex-col items-center justify-center py-20"
@@ -15,22 +15,13 @@ function Projects (){
         My Projects
       </h2>
       <div className="grid-cards-container">
-     {myProjects.map((project)=>(
-<ProjectCard
-key={project.title}
-src={project.src}
-title={project.title}
-description={project.description}/>
-     ))}
-
-
-{myProjects.map((project)=>(
-<CardAnimated
-key={project.title}
-src={project.src}
-title={project.title}
-description={project.description}/>
-     ))}
+        {myProjects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            src={project.src}
+            title={project.title}
+            description={project.description} />
+        ))}
       </div>
     </section>
   );
