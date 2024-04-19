@@ -59,7 +59,6 @@ function HeroContent() {
             height={650}
             width={650}
             />
-
             </motion.div>
         </motion.div>
     )
