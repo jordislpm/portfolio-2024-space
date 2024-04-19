@@ -1,3 +1,4 @@
+
 export interface typeSkillDataProvider{
     Image_src: string;
     width: number;
@@ -8,4 +9,14 @@ export interface typeSkillDataProvider{
 export interface typeSkillsMiniSection  {
     title: string
     data: typeSkillDataProvider[];
+}
+
+export interface typeProjectCard{
+    src: string;
+    title: string;
+    description: string;
+}
+
+export interface typeMyProjects{
+   data: typeProjectCard[];
 }
