@@ -15,6 +15,9 @@ export interface typeProjectCard{
     src: string;
     title: string;
     description: string;
+    liveCode: string;
+    repository:string;
+
 }
 
 export interface typeMyProjects{

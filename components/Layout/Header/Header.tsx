@@ -38,20 +38,20 @@ function Header() {
                 </a>
                 <div className='w-[500px] h-full flex flex-row items-center justify-between md:mr-20'>
                     <Nav />
-                 
+
                 </div>
                 <div className='flex flex-row gap-5'>
-                        {Socials.map((social) => (
-                            <Image
-                                className='cursor-pointer'
-                                src={social.src}
-                                alt={social.name}
-                                key={social.name}
-                                width={24}
-                                height={24} />
-                        ))
-                        }
-                    </div>
+                    {Socials.map((social) => (
+                        <Image
+                            className='cursor-pointer'
+                            src={social.src}
+                            alt={social.name}
+                            key={social.name}
+                            width={24}
+                            height={24} />
+                    ))
+                    }
+                </div>
             </div>
         </div>
     )

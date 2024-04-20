@@ -20,7 +20,9 @@ function Projects() {
             key={project.title}
             src={project.src}
             title={project.title}
-            description={project.description} />
+            description={project.description}
+            liveCode={project.liveCode} 
+            repository={project.repository}/>
         ))}
       </div>
     </section>

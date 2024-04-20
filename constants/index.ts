@@ -250,6 +250,32 @@ export const Skill_data = [
       height: 60,
     },
   ];
+
+  export const Source = [
+    {
+      name: "Link",
+      src: "/link.svg",
+    },
+    {
+      name: "Github",
+      src: "/github.svg",
+    },
+ 
+  ];
+
+  export const Sources = [
+   
+    {
+      name: "Link",
+      src: "/link.svg",
+    },
+    {
+      name: "Discord",
+      src: "/instagram.svg",
+    },
+ 
+  ];
+  
   
   
   
