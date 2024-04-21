@@ -17,7 +17,8 @@ export interface typeProjectCard{
     description: string;
     liveCode: string;
     repository:string;
-
+    technologies: string[];
+    stackType: string
 }
 
 export interface typeMyProjects{

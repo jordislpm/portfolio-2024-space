@@ -13,8 +13,12 @@ const StarBackground = (props: any) => {
   );
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta/10;
-    ref.current.rotation.y -= delta/15;
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
+  } else {
+      console.error("ref.current no está definido.");
+  }
   })
 
 
@@ -40,7 +44,7 @@ const StarBackground = (props: any) => {
 };
 
 const StarsCanvas = () => (
-    <div className="w-full h-auto fixed inset-0 z-[20]">
+    <div className="w-full h-auto fixed inset-0 z-[10]">
         <Canvas camera={{position: [0, 0, 1]}}>
         <Suspense fallback={null}>
             <StarBackground />
