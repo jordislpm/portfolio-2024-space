@@ -84,14 +84,17 @@ export const Skill_data = [
     {
       name: "Discord",
       src: "/instagram.svg",
+      link: "https://www.instagram.com/jordislpm/"
     },
     {
-      name: "Facebook",
-      src: "/facebook.svg",
+      name: "Linkedin",
+      src: "/linkedin-white.svg",
+      link: "https://www.linkedin.com/in/juan-tomas-de-pena-medina/"
     },
     {
       name: "Instagram",
-      src: "/discord.svg",
+      src: "/discord-white.svg",
+      link:"https://discord.com/users/jordislpm"
     },
   ];
   
@@ -123,8 +126,8 @@ export const Skill_data = [
       height: 80,
     },
     {
-      skill_name: "Material UI",
-      Image_src: "/mui.png",
+      skill_name: "Bootstrap",
+      Image_src: "/bootstrap.png",
       width: 80,
       height: 80,
     },
@@ -186,20 +189,8 @@ export const Skill_data = [
       height: 55,
     },
     {
-      skill_name: "Postger SQL",
-      Image_src: "/postger.png",
-      width: 70,
-      height: 70,
-    },
-    {
-      skill_name: "My SQL",
-      Image_src: "/mysql.png",
-      width: 70,
-      height: 70,
-    },
-    {
-      skill_name: "Prisma",
-      Image_src: "/prisma.webp",
+      skill_name: "Postgre SQL",
+      Image_src: "/postgreSQL.png",
       width: 70,
       height: 70,
     },
@@ -219,23 +210,10 @@ export const Skill_data = [
       height: 70,
     },
     {
-      skill_name: "Tauri",
-      Image_src: "/tauri.svg",
-      width: 70,
-      height: 70,
-    },
-    {
       skill_name: "Docker",
       Image_src: "/docker.webp",
       width: 70,
       height: 70,
-    },
-  
-    {
-      skill_name: "Figma",
-      Image_src: "/figma.png",
-      width: 50,
-      height: 50,
     },
   
   ];
@@ -244,8 +222,14 @@ export const Skill_data = [
   
   export const Other_skill = [
     {
-      skill_name: "Go",
-      Image_src: "/go.png",
+      skill_name: "Github",
+      Image_src: "/github.png",
+      width: 60,
+      height: 60,
+    },
+    {
+      skill_name: "Git",
+      Image_src: "/git.png",
       width: 60,
       height: 60,
     },

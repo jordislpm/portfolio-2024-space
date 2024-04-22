@@ -30,7 +30,7 @@ function ProjectCard({ src, title, description, repository, liveCode, stackType,
                         ))} 
                     </p>
                     </div>
-                    <div className='flex flex-col justify-around items-center w-[70px] min-h-[30] '>
+                    <div className='flex flex-col justify-between items-center w-[70px] min-h-[30] '>
                         <a className='flex button-primary cursor-pointer p-2 w-[40px] rounded'
                             href={liveCode}
                             target='_blank'

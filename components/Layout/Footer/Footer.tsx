@@ -7,7 +7,8 @@ import {
   RxLinkedinLogo,
 } from "react-icons/rx";
 
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaInstagram } from "react-icons/fa";
+import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -16,18 +17,26 @@ const Footer = () => {
             <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">Social Media</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
-                        <span className="text-[15px] ml-[6px]">Instagram</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer"
+                    href="https://github.com/jordislpm"
+                    target="_blank">
                         <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Twitter</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
+                        <span className="text-[15px] ml-[6px]">Github</span>    
+                    </a>
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer"
+                    href="https://www.linkedin.com/in/juan-tomas-de-pena-medina/"
+                    target="_blank">
+                        <AiOutlineLinkedin />
                         <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                    </p>
+                    </a>
+                    <a 
+                    className="flex flex-row items-center my-[15px] cursor-pointer"
+                    href="https://www.instagram.com/jordislpm/"
+                    target="_blank"
+                    >
+                        <FaInstagram />
+                        <span className="text-[15px] ml-[6px]">Instagram</span>    
+                    </a>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">About</div>

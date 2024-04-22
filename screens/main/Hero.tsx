@@ -7,7 +7,7 @@ const Hero = () => {
     console.log('ProjectCard fue clickeado');
   }
   return (
-    <div className="relative flex flex-col h-full w-full" id="about-me"
+    <div className="relative flex flex-col h-full w-full" id="#about-me"
     onClick={handleClick}>
       <video
         autoPlay
