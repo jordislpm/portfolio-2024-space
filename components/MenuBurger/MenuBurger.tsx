@@ -15,7 +15,7 @@ function MenuBurger({ onChildClick, openMenu }: MenuBurgerProps) {
 
   return (
     <div onClick={toggleOpen}
-    className='block md:hidden'>
+    className='block lg:hidden'>
         <div className='relative flex justify-center items-center w-[25px] h-full bg-green p-auto'>
         {openMenu ?
          <Image

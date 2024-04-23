@@ -55,12 +55,12 @@ function Header() {
             <div className='w-full h-full flex flex-row intems-center justify-between m-auto px-[10px]'>
                 <a href='about-me' className='h-auto w-auto flex flex-row items-center'>
                     <Image
-                        src='/NavLogo.png'
+                        src='/jordisdev-logo.png'
                         alt='logo'
                         height={70}
                         width={70}
                         className='cursor-pointer hover:animation-slowpin' />
-                    <span className='font-bold ml-[10px] hidden md:block text-gray-300'>
+                    <span className='font-bold ml-[10px] hidden lg:block text-gray-300'>
                         JordisDev Porfolio
                     </span>
                 </a>

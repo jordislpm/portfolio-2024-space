@@ -11,9 +11,9 @@ import SkillText from '@/components/SkillText/SkillText'
 function Skills() {
     return (
         <section
-        id="skills"
+        id="#skills"
         className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20 z-[30]"
-        style={{ transform: "scale(0.9" }}
+        // style={{ transform: "scale(0.9)" }}
         >
             <SkillText />
             <SkillsMiniSection
