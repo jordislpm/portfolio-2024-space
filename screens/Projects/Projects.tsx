@@ -1,20 +1,31 @@
+"use client"
+
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
-import React from "react";
+import React, {useRef} from "react";
 import { myProjects } from "@/constants/projects";
 import ProjectCardAnimated from "@/components/ProjectCardAnimated/ProjectCardAnimated";
-
+import {motion, useScroll} from "framer-motion"
 function Projects() {
+
+const ref = useRef<HTMLElement>(null);
+const {scrollYProgress} = useScroll({
+target: ref,
+offset:["0 1", "1.33 1"]
+})
+
+
   return (
-    <section
-      className="flex flex-col items-center justify-center py-20 z-[30]"
-      id="#projects"
+    <motion.section
+    ref={ref}
+      className="scroll-mt-28 flex flex-col items-center justify-center z-[30]"
+      id="projects"
     >
-      <h2 
-      className='text-[30px] font-medium mt-[10px] text-center mb-[15px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20'>
+      <h2
+        className='text-[30px] font-medium mt-[10px] text-center mb-[15px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'>
         My Projects
       </h2>
       <div className="grid-cards-container"
-       
+
       >
         {/* {myProjects.map((project) => (
           <ProjectCard
@@ -27,19 +38,13 @@ function Projects() {
             technologies={project.technologies}
             stackType={project.stackType}/>
         ))} */}
-                {myProjects.map((project) => (
-          <ProjectCardAnimated
-            key={project.title}
-            src={project.src}
-            title={project.title}
-            description={project.description}
-            liveCode={project.liveCode} 
-            repository={project.repository}
-            technologies={project.technologies}
-            stackType={project.stackType}/>
+        {myProjects.map((project) => (
+          <React.Fragment key={project.title}>
+            <ProjectCardAnimated {...project} />
+          </React.Fragment>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

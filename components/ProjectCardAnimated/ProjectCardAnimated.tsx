@@ -20,7 +20,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   return (
     <div
     onClick={handleFlip}
-    className='border border-[#2A0E61] max-w-500  h-[280px] rounded-md cursor-pointer'>
+    className='border border-[#2A0E61] max-w-500  h-[400px] rounded-md cursor-pointer overflow-hidden'>
         <motion.div
         className='flip-card-inner w-full h-full'
         initial={false}
@@ -39,11 +39,13 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
             <div
             style={{backgroundImage: `url(${src})`}}
             className='w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-lg'>
-<div className='flex flex-col w-full h-full justify-center items-center p-4 bg-black opacity-75'>
+<div className='flex flex-col w-full h-full justify-around items-center p-1 bg-black opacity-75'>
                 <h1 className="text-2xl font-semibold text-white">{title}</h1>
                 <div className="flex w-full justify-around gap-1 min-h-[100px]">
                     <div>
+                    <div className="border p-1">
                     <p className="mt-2 text-black-300">{description}</p>
+                    </div>
                     <p className="mt-2 text-white">
                         The project was implemented using: 
                         {technologies.map((tecnology)=>(

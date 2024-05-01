@@ -1,5 +1,6 @@
-import Footer from "@/components/Layout/Footer/Footer";
 import Hero from "@/components/main/Hero";
+import Experience from "@/screens/Experience/Experience";
+import Experience2 from "@/screens/Experience2/Experience2";
 import Projects from "@/screens/Projects/Projects";
 import Skills from "@/screens/Skills/Skills";
 
@@ -12,7 +13,7 @@ export default function Home() {
     <Hero/>
      <Skills/>
      <Projects/>
-     <Footer/>
+     <Experience/>
       </div>
     </main>
   );

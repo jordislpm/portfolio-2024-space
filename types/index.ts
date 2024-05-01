@@ -30,3 +30,11 @@ export interface typesTypingAnimation{
     time: number;
     className: string
 }
+
+export interface TypeExperience {
+    year: string,
+    role:string,
+    company: string,
+    description: string,
+    technologies: string[],
+}
