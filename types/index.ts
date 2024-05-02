@@ -32,9 +32,10 @@ export interface typesTypingAnimation{
 }
 
 export interface TypeExperience {
-    year: string,
-    role:string,
+    date: string,
+    title:string,
     company: string,
     description: string,
-    technologies: string[],
+    technologies: string[]
+    icon: string;
 }
