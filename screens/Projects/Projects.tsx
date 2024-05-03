@@ -27,17 +27,6 @@ offset:["0 1", "1.33 1"]
       <div className="grid-cards-container"
 
       >
-        {/* {myProjects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            src={project.src}
-            title={project.title}
-            description={project.description}
-            liveCode={project.liveCode} 
-            repository={project.repository}
-            technologies={project.technologies}
-            stackType={project.stackType}/>
-        ))} */}
         {myProjects.map((project) => (
           <React.Fragment key={project.title}>
             <ProjectCardAnimated {...project} />

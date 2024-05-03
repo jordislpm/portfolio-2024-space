@@ -5,41 +5,58 @@ import { LuGraduationCap } from "react-icons/lu";
 
 
 export const Experiences = [
-      {
-        title: "Graduated bootcamp",
-        location: "Online",
-        company: "Academia X",
-        description: "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        technologies: ["HTML5","CSS","Javascript", "React.js", "Node", "Express", "PostgreSQL"],
-        date: "2022",
-        icon: "/graduate-white.png"
-      },
     {
-      title: "Trainee Frontend Developer",
-      location: "Colombia, 'Remote'",
-      company: "Nevobit",
-      description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-      technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-      date: "January 2023 - May 2023",
-      icon: "/experience/nevobit.png"
+      title: "Bootcamp Graduate",
+      location: "Online",
+      company: "Academia X",
+      description:
+        "I graduated after 6 months of study. During this time, I practiced with my own projects, built web pages, cloned existing websites, and studied in more depth everything I learned in the bootcamp.",
+      technologies: ["HTML5", "CSS", "JavaScript", "React.js", "Node.js", "Express", "PostgreSQL"],
+      date: "2022",
+      icon: "/graduate-white.png",
     },
     {
-        title: "Junior Frontend Developer",
-        location: "Colombia, 'Remote'",
-        company: "Nevobit",
-        description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-        technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-        date: "May 2023 - Present",
-        icon: "/experience/nevobit.png"
-      },
+      title: "Trainee Frontend Developer",
+      location: "Colombia (Remote)",
+      company: "Nevobit",
+      description:
+        "I completed an internship where I learned the company's project architecture and how to manage the workflow. I created simple components, implemented basic functionalities, and fixed some bugs.",
+      technologies: ["HTML5", "CSS", "JavaScript", "React.js", "Next.js", "Redux Toolkit"],
+      date: "January 2023 - May 2023",
+      icon: "/experience/nevobit.png",
+    },
     {
-        title: "Trainee Full Stack Developer",
-        location: "Colombia, 'Remote'",
-        company: "Google Inc.",
-        description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-        technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-        date: "2024 - Present",
-        icon: "/experience/nevobit.png",
-      },
-
+      title: "Junior Frontend Developer",
+      location: "Colombia (Remote)",
+      company: "Nevobit",
+      description:
+        "I joined a product development team, developing and maintaining web applications using Next.js. I was responsible for developing entire frontends for some projects, and for others, I collaborated with colleagues. I implemented global state management and API connections using Redux Toolkit.",
+      technologies: ["HTML5", "CSS", "JavaScript", "React.js", "Next.js", "Redux Toolkit", "Git", "GitHub"],
+      date: "May 2023 - Present",
+      icon: "/experience/nevobit.png",
+    },
+    {
+      title: "Trainee Full Stack Developer",
+      location: "Colombia (Remote)",
+      company: "Nevobit",
+      description:
+        "In this role, I continued with the same frontend development tasks while starting to explore backend development. I implemented simple business logic, modified existing components, and worked with databases, including MongoDB and PostgreSQL. I also started using GraphQL.",
+      technologies: [
+        "HTML5",
+        "CSS",
+        "JavaScript",
+        "React.js",
+        "Next.js",
+        "Redux Toolkit",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "GraphQL",
+        "Git",
+        "GitHub",
+      ],
+      date: "2024 - Present",
+      icon: "/experience/nevobit.png",
+    },
   ];

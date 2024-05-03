@@ -20,7 +20,7 @@ function Experience() {
         >
             <h2
                 className='text-[30px] font-medium mt-[10px] text-center mb-[15px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20'>
-                Work experience
+                Experience
             </h2>
             {/* <VerticalTimeline>
                 {Experiences.map((experience, index) => (

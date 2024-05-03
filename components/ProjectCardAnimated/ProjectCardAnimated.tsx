@@ -39,12 +39,12 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
             <div
             style={{backgroundImage: `url(${src})`}}
             className='w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-lg'>
-<div className='flex flex-col w-full h-full justify-around items-center p-1 bg-black opacity-75'>
+<div className='flex flex-col w-full h-full justify-around items-center p-1 bg-black opacity-85'>
                 <h1 className="text-2xl font-semibold text-white">{title}</h1>
                 <div className="flex w-full justify-around gap-1 min-h-[100px]">
                     <div>
-                    <div className="border p-1">
-                    <p className="mt-2 text-black-300">{description}</p>
+                    <div className="border rounded p-1 border-[#06b6d4] bg-[#7042f899]">
+                    <p className="mt-2 text-white">{description}</p>
                     </div>
                     <p className="mt-2 text-white">
                         The project was implemented using: 
@@ -54,9 +54,8 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
                     </p>
                     </div>
                     <div className='flex flex-col justify-between items-center w-[70px] min-h-[30] '>
-                        <a className='flex button-primary cursor-pointer p-2 w-[40px] rounded'
+                        <a className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-50 hover:border hover:border-[#06b6d4] '
                             href={liveCode}
-                            target='_blank'
                          >
                             <Image
                                 className='project_link'
@@ -66,9 +65,9 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
                                 width={35}
                                 height={35} />
                         </a>
-                        <a className='flex button-primary cursor-pointer p-2 w-[40px] rounded'
+                        <a className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-50 hover:border hover:border-[#06b6d4]'
                             href={repository}
-                            target='_blank'>
+                            >
                             <Image
                                 className='project_link'
                                 src={Source[1].src}

@@ -60,7 +60,7 @@ function Header() {
                         height={70}
                         width={70}
                         className='cursor-pointer hover:animation-slowpin' />
-                    <span className='font-bold ml-[10px] hidden lg:block text-gray-300'>
+                    <span className='font-bold ml-[10px] hidden lg:block text-gray-300 hover:text-[#06b6d4]'>
                         JordisDev Porfolio
                     </span>
                 </a>
