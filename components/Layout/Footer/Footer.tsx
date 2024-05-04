@@ -8,7 +8,6 @@ import {
   
 } from "react-icons/rx";
 
-import { FaYoutube, FaInstagram } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Footer = () => {
