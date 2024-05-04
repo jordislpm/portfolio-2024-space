@@ -1,7 +1,8 @@
-import Hero from "@/components/main/Hero";
+
 import Experience from "@/screens/Experience/Experience";
 import Projects from "@/screens/Projects/Projects";
 import Skills from "@/screens/Skills/Skills";
+import Hero from "@/screens/main/Hero";
 
 import Image from "next/image";
 

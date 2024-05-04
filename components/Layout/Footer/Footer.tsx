@@ -5,6 +5,7 @@ import {
   RxInstagramLogo,
   RxTwitterLogo,
   RxLinkedinLogo,
+  
 } from "react-icons/rx";
 
 import { FaYoutube, FaInstagram } from "react-icons/fa";
@@ -12,7 +13,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-[25]">
+    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-[15]">
         <div className="w-full flex flex-col items-center justify-center m-auto">
             <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
@@ -31,11 +32,11 @@ const Footer = () => {
                     </a>
                     <a 
                     className="flex flex-row items-center my-[15px] cursor-pointer"
-                    href="https://www.instagram.com/jordislpm/"
+                    href="https://discord.com/users/jordislpm"
                     target="_blank"
                     >
-                        <FaInstagram />
-                        <span className="text-[15px] ml-[6px]">Instagram</span>    
+                        <RxDiscordLogo />
+                        <span className="text-[15px] ml-[6px]">Discord</span>    
                     </a>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">

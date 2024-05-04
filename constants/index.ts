@@ -81,18 +81,18 @@ export const Skill_data = [
   ];
   
   export const Socials = [
-    {
-      name: "Discord",
-      src: "/instagram.svg",
-      link: "https://www.instagram.com/jordislpm/"
-    },
+    // {
+    //   name: "Instagram",
+    //   src: "/instagram.svg",
+    //   link: "https://www.instagram.com/jordislpm/"
+    // },
     {
       name: "Linkedin",
       src: "/linkedin-white.svg",
       link: "https://www.linkedin.com/in/juan-tomas-de-pena-medina/"
     },
     {
-      name: "Instagram",
+      name: "Discord",
       src: "/discord-white.svg",
       link:"https://discord.com/users/jordislpm"
     },

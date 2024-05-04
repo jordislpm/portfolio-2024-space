@@ -20,7 +20,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   return (
     <div
     onClick={handleFlip}
-    className='border border-[#2A0E61] max-w-500  h-[400px] rounded-md cursor-pointer overflow-hidden'>
+    className='border border-[#2A0E61] max-w-500 lg:h-[400px] h-[500px] rounded-md cursor-pointer'>
         <motion.div
         className='flip-card-inner w-full h-full'
         initial={false}
@@ -32,7 +32,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
             style={{backgroundImage: `url(${src})`}}
             className='w-full h-full group relative flip-card-front bg-cover bg-center text-white rounded-lg p-4'>
                     <div  className='absolute inset-0 w-full h-full rounded-md bg-black opacity-0 group-hover:opacity-40'/>
-                    <div className='absolute inset-0 w-full h-full text-[20px] pb-10 hidden group-hover:flex items-center z-[20] justify-center'>
+                    <div className='absolute inset-0 w-full h-full text-[20px] pb-10 hidden group-hover:flex items-center justify-center'>
                     Learn more &gt;
                     </div>
             </div>
@@ -47,7 +47,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
                     <p className="mt-2 text-white">{description}</p>
                     </div>
                     <p className="mt-2 text-white">
-                        The project was implemented using: 
+                        The project was implemented using: |
                         {technologies.map((tecnology)=>(
                             <p className="inline"key={tecnology}> {tecnology} |</p>
                         ))} 

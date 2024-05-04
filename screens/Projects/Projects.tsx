@@ -17,7 +17,7 @@ offset:["0 1", "1.33 1"]
   return (
     <motion.section
     ref={ref}
-      className="scroll-mt-28 flex flex-col items-center justify-center z-[30]"
+      className="scroll-mt-28 flex flex-col items-center justify-center z-[30] min-h-[auto]"
       id="projects"
     >
       <h2
