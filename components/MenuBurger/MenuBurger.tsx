@@ -19,7 +19,7 @@ function MenuBurger({ onChildClick, openMenu }: MenuBurgerProps) {
         <div className='relative flex justify-center items-center w-[25px] h-full bg-green p-auto'>
         {openMenu ?
          <Image
-         className={`cursor-pointer w-full h-auto md:w-[30px] absolute left-3 rounded ${openMenu ? "bg-[#7042f861]" : ""}`}
+         className={`cursor-pointer w-full h-auto md:w-[30px] absolute left-3 rounded  ${openMenu ? "bg-[#7042f861] border-[1px] border-[#06b6d4]" : ""}`}
          src="/close-white.svg"
          alt="/close-white.svg"
          width={20}
