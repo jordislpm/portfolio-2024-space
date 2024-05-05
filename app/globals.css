@@ -147,5 +147,16 @@ background-size: cover;
   transform: rotateY(180deg);
 }
 
+.video_hole{
+    transform: rotate(180deg);
+    position: absolute;
+    top: -340px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    z-index: -35;
+    object-fit: cover;
+
+}
 
 
