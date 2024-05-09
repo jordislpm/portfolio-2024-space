@@ -20,7 +20,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   return (
     <div
     onClick={handleFlip}
-    className='border border-[#2A0E61] max-w-500 lg:h-[400px] h-[500px] rounded-md cursor-pointer'>
+    className='border border-[#2A0E61] max-w-500 md:h-[550px] sm:h-[500px] h-[500px] rounded-md cursor-pointer'>
         <motion.div
         className='flip-card-inner w-full h-full'
         initial={false}
@@ -41,7 +41,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
             className='w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-lg'>
 <div className='flex flex-col w-full h-full justify-around items-center p-1 bg-black opacity-85'>
                 <h1 className="text-2xl font-semibold text-white">{title}</h1>
-                <div className="flex w-full justify-around gap-1 min-h-[100px]">
+                <div className="flex w-full flex-col justify-around gap-1 min-h-[100px]">
                     <div>
                     <div className="border rounded p-1 border-[#06b6d4] bg-[#7042f899]">
                     <p className="mt-2 text-white">{description}</p>
@@ -53,7 +53,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
                         ))} 
                     </p>
                     </div>
-                    <div className='flex flex-col justify-between items-center w-[70px] min-h-[30] '>
+                    <div className='flex flex-row justify-around items-center w-full h-full'>
                         <a className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-50 hover:border hover:border-[#06b6d4] '
                             href={liveCode}
                          >
