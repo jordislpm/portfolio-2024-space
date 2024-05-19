@@ -21,7 +21,7 @@ export const Experiences = [
       company: "Nevobit",
       description:
         "I completed an internship where I learned the company's project architecture and how to manage the workflow. I created simple components, implemented basic functionalities, and fixed some bugs.",
-      technologies: ["HTML5", "CSS", "JavaScript", "React.js", "Next.js", "Redux Toolkit"],
+      technologies: ["HTML5", "CSS", "JavaScript", "TypeScript", "React.js", "Next.js", "Redux Toolkit"],
       date: "January 2023 - May 2023",
       icon: "/experience/nevobit.png",
     },
@@ -31,7 +31,7 @@ export const Experiences = [
       company: "Nevobit",
       description:
         "I joined a product development team, developing and maintaining web applications using Next.js. I was responsible for developing entire frontends for some projects, and for others, I collaborated with colleagues. I implemented global state management and API connections using Redux Toolkit.",
-      technologies: ["HTML5", "CSS", "JavaScript", "React.js", "Next.js", "Redux Toolkit", "Git", "GitHub"],
+      technologies: ["HTML5", "CSS", "JavaScript","TypeScript", "React.js", "Next.js", "Redux Toolkit", "Git", "GitHub"],
       date: "May 2023 - Present",
       icon: "/experience/nevobit.png",
     },
@@ -45,6 +45,7 @@ export const Experiences = [
         "HTML5",
         "CSS",
         "JavaScript",
+        "TypeScript",
         "React.js",
         "Next.js",
         "Redux Toolkit",
