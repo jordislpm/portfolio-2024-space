@@ -18,12 +18,22 @@ export const myProjects = [
         stackType: "frontend"
     },
     {
+        src: "/projects/safe-rent-car.png",
+        title: "Safe Rent Car",
+        description: "A great personal project for renting cars, where you can choose the vehicle of your choice and rent it for a good price. Currently it is a frontend project that obtains data from a public API, it is a project that is still in development and my goal is to create my own backend and make it a complete fullstack project, with its own database of cars and users.",
+        repository: "https://github.com/jordislpm/safe-rent-car",
+        liveCode: "https://safe-rent-car.vercel.app/",
+        technologies: ["HTML", "CSS", "JavaScript", "React", "Next 14", "Tailwind CSS"],
+        stackType: "frontend"
+    },
+    {
         src: "/projects/pokeApp.png",
         title: "Pokemon app",
         description: "This is a simple project that I did when I was learning react, it is very basic to show in this portfolio, but it was my first project consuming a rest api, using global state, ect. That's why I'm nostalgic for it and I always like to share it.",
         repository: "https://github.com/jordislpm/PokeApp",
-        liveCode: "https://stellar-tarsier-ffef13.netlify.app/",
+        liveCode: "https://poke-app-ebon-zeta.vercel.app/",
         technologies: ["HTML", "CSS", "JavaScript", "React"],
         stackType: "frontend"
     },
+   
 ]
