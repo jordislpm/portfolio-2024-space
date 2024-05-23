@@ -5,6 +5,7 @@ import React, {useRef} from "react";
 import { myProjects } from "@/constants/projects";
 import ProjectCardAnimated from "@/components/ProjectCardAnimated/ProjectCardAnimated";
 import {motion, useScroll} from "framer-motion"
+import ProjectCardAnimated2 from "@/components/ProjectCardAnimated2/ProjectCardAnimated2";
 function Projects() {
 
 const ref = useRef<HTMLElement>(null);
@@ -30,6 +31,11 @@ offset:["0 1", "1.33 1"]
         {myProjects.map((project) => (
           <React.Fragment key={project.title}>
             <ProjectCardAnimated {...project} />
+          </React.Fragment>
+        ))}
+         {myProjects.map((project) => (
+          <React.Fragment key={project.title}>
+            <ProjectCardAnimated2 {...project} />
           </React.Fragment>
         ))}
       </div>
