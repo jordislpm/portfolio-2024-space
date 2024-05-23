@@ -11,17 +11,19 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
     const [isFlipped, setIsFlipped] = useState(false)
     const [isAnimating, setIsAnimating] = useState(false)
 
-    const handleFlip = () => {
+    const handleFlip = (e: React.MouseEvent | React.TouchEvent) => {
       setIsFlipped(!isFlipped);
+      e.stopPropagation();
     };
   
-    const handleLinkClick = (e: React.MouseEvent) => {
+    const handleLinkClick = (e: React.MouseEvent | React.TouchEvent) => {
       e.stopPropagation();
     };
   
     return (
       <div
         onClick={handleFlip}
+        onTouchEnd={handleFlip}
         className='border border-[#2A0E61] max-w-500 md:h-[550px] sm:h-[500px] h-[500px] rounded-md cursor-pointer perspective-1000'
       >
         <div
@@ -59,6 +61,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
                     className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-50 hover:border hover:border-[#06b6d4]'
                     href={liveCode}
                     onClick={handleLinkClick}
+                    onTouchEnd={handleLinkClick}
                   >
                     <Image
                       className='project_link'
@@ -73,6 +76,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
                     className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-50 hover:border hover:border-[#06b6d4]'
                     href={repository}
                     onClick={handleLinkClick}
+                    onTouchEnd={handleLinkClick}
                   >
                     <Image
                       className='project_link'

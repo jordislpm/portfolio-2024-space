@@ -189,7 +189,7 @@ background-size: cover;
 }
 
 .transition-transform {
-  transition: transform 01;
+  transition: transform 1s;
 }
 
 .duration-600 {
