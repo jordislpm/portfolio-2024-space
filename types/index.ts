@@ -39,3 +39,9 @@ export interface TypeExperience {
     technologies: string[]
     icon: string;
 }
+
+export interface CardProjectLinkProps {
+    link: string;
+    name: string;
+    img: string;
+}
