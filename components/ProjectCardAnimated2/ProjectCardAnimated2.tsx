@@ -10,12 +10,8 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   const [isFlipped, setIsFlipped] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
 
-  const handleFlip = (e: React.MouseEvent | React.TouchEvent) => {
+  const handleFlip = (e: React.MouseEvent) => {
     setIsFlipped(!isFlipped);
-    e.stopPropagation();
-  };
-
-  const handleLinkClick = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation();
   };
 
