@@ -2,16 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 import { CardProjectLinkProps } from '@/types';
 
-
-
 function CardProjectLink({ link, name, img }: CardProjectLinkProps) {
   const handleLinkClick = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
+
   const handleLinkTouch = (e: React.TouchEvent) => {
     e.stopPropagation();
   };
-
 
   return (
     <a
@@ -32,4 +30,4 @@ function CardProjectLink({ link, name, img }: CardProjectLinkProps) {
   )
 }
 
-export default CardProjectLink
+export default CardProjectLink;

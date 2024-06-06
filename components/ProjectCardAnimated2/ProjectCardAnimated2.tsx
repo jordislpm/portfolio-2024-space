@@ -4,11 +4,8 @@ import { typeProjectCard } from '@/types'
 import { Source } from '@/constants'
 import CardProjectLink from '../CardProjectLink/CardProjectLink'
 
-
-
 const ProjectCardAnimated = ({ src, title, description, repository, liveCode, technologies, stackType }: typeProjectCard) => {
   const [isFlipped, setIsFlipped] = useState(false)
-  const [isAnimating, setIsAnimating] = useState(false)
 
   const handleFlip = (e: React.MouseEvent) => {
     setIsFlipped(!isFlipped);
@@ -18,7 +15,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   return (
     <div
       onClick={handleFlip}
-      className='border border-[#2A0E61] max-w-500 md:h-[350px] sm:h-[350px] h-[350px] rounded-md cursor-pointer perspective-1000'
+      className='border border-[#2A0E61] max-w-500 md:h-[350px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000'
     >
       <div
         className={`flip-card-inner w-full h-full transition-transform duration-600 transform ${isFlipped ? 'rotate-y-180' : ''}`}
@@ -51,36 +48,6 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
                 </p>
               </div>
               <div className='flex flex-row justify-around items-center w-full h-full'>
-                {/* <a
-                    className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-50 hover:border hover:border-[#06b6d4]'
-                    href={liveCode}
-                    onClick={handleLinkClick}
-                    onTouchEnd={handleLinkClick}
-                  >
-                    <Image
-                      className='project_link'
-                      src={Source[0].src}
-                      alt={Source[0].name}
-                      key={Source[0].name}
-                      width={35}
-                      height={35}
-                    />
-                  </a>
-                  <a
-                    className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-50 hover:border hover:border-[#06b6d4]'
-                    href={repository}
-                    onClick={handleLinkClick}
-                    onTouchEnd={handleLinkClick}
-                  >
-                    <Image
-                      className='project_link'
-                      src={Source[1].src}
-                      alt={Source[1].name}
-                      key={Source[1].name}
-                      width={35}
-                      height={35}
-                    />
-                  </a> */}
                 {Source.map((source, index) => (
                   <Fragment key={source.name}>
                     <CardProjectLink
@@ -98,5 +65,4 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   );
 };
 
-
-export default ProjectCardAnimated
+export default ProjectCardAnimated;
