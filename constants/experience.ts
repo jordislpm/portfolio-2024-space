@@ -57,7 +57,7 @@ export const Experiences = [
         "Git",
         "GitHub",
       ],
-      date: "2024 - Present",
+      date: "May 2024 - Present",
       icon: "/experience/nevobit.png",
     },
   ];

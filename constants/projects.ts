@@ -27,6 +27,15 @@ export const myProjects = [
         stackType: "frontend"
     },
     {
+        src: "/projects/geomatic-landing.png",
+        title: "Surveying Landing page",
+        description: "This project serves as a landing page template tailored for surveying or geospatial-related businesses. With a clean and modern design, it aims to showcase the services offered by a surveying company, such as land surveying, cartography, and georeferencing. The landing page provides essential information about the company's expertise, team, and contact details, helping to attract potential clients and establish credibility in the industry.",
+        repository: "https://github.com/jordislpm/geomatic-d-pena",
+        liveCode: "https://geomatic-d-pena.vercel.app/",
+        technologies: ["HTML", "CSS", "TypeScript", "React", "Next 14"],
+        stackType: "frontend"
+    },
+    {
         src: "/projects/pokeApp.png",
         title: "Pokemon app",
         description: "This is a simple project that I did when I was learning react, it is very basic to show in this portfolio, but it was my first project consuming a rest api, using global state, ect. That's why I'm nostalgic for it and I always like to share it.",
@@ -35,5 +44,4 @@ export const myProjects = [
         technologies: ["HTML", "CSS", "JavaScript", "React"],
         stackType: "frontend"
     },
-   
 ]
