@@ -49,12 +49,11 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
               </div>
               <div className='flex flex-row justify-around items-center w-full h-full'>
                 {Source.map((source, index) => (
-                  <Fragment key={source.name}>
-                    <CardProjectLink
-                      link={`${index === 0 ? liveCode : repository}`}
-                      img={source.src}
-                      name={source.name} />
-                  </Fragment>
+                  <CardProjectLink
+                    key={source.name}
+                    link={`${index === 0 ? liveCode : repository}`}
+                    img={source.src}
+                    name={source.name}/>
                 ))}
               </div>
             </div>
