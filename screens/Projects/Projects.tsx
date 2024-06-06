@@ -18,14 +18,14 @@ offset:["0 1", "1.33 1"]
   return (
     <motion.section
     ref={ref}
-      className="scroll-mt-28 flex flex-col items-center justify-center z-[30] min-h-[auto]"
+      className="scroll-mt-28 flex flex-col items-center justify-center z-[30] min-h-[auto] p-[50px]"
       id="projects"
     >
       <h2
         className='text-[30px] font-medium mt-[10px] text-center mb-[15px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'>
         My Projects
       </h2>
-      <div className="grid-cards-container"
+      <div className="grid_cards_container"
 
       >
          {myProjects.map((project) => (

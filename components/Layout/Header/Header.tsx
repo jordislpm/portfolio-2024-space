@@ -11,7 +11,7 @@ function Header() {
     const [showNav, setShowNav] = useState<boolean>(true)
     useEffect(() => {
         const handleScroll = () => {
-            const isTop = window.scrollY === 0;
+            const isTop = window.scrollY === 25;
             if (!isTop && !scroll) {
                 setScroll(true);
             } else if (isTop && scroll) {
