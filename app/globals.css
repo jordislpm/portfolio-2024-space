@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,7 +43,7 @@
     ),
     rgba(113, 47, 255, 0.12);
   box-shadow: inset 0 0 12px #bf97ff3d;
-  border: solid 1px #bf97ff3d
+  border: solid 1px #bf97ff3d;
 }
 .button-primary:hover {
   background: linear-gradient(
@@ -71,16 +70,17 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
-
 body::-webkit-scrollbar {
   width: 0.4rem;
   /* background: var(--black-primary); */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(to right, #8B5CF6, #2DD4BF); /* Gradiente lineal */
+  background-image: linear-gradient(
+    to right,
+    #8b5cf6,
+    #2dd4bf
+  ); /* Gradiente lineal */
   border-radius: 6px; /* Radio de borde */
 }
 
@@ -91,32 +91,30 @@ body::-webkit-scrollbar-thumb {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 15px;
   justify-content: center;
-  align-items:center;
-  padding:15px;
+  align-items: center;
+  padding: 15px;
 }
 
-
-.circle_black_hole{
+.circle_black_hole {
   display: flex;
   width: 100%;
   height: 100%;
   position: absolute;
-
 }
 
-.circle_black_hole div{
-width: 100%;
-height: 100%;
-z-index: -100;
-opacity: 0.3;
-display: flex;
-justify-content: center;
-align-items: center;
-background-size: cover;
+.circle_black_hole div {
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
 }
 
-.blackhole_principal{
-  width: 500px
+.blackhole_principal {
+  width: 500px;
 }
 
 .flip-card-inner {
@@ -134,18 +132,16 @@ background-size: cover;
   transform: rotateY(180deg);
 }
 
-.video_hole{
-    transform: rotate(180deg);
-    position: absolute;
-    top: -340px;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    z-index: -35;
-    object-fit: cover;
-
+.video_hole {
+  transform: rotate(180deg);
+  position: absolute;
+  top: -340px;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  z-index: -35;
+  object-fit: cover;
 }
-
 
 /* ProjectCardAnimated2 Styles */
 
@@ -160,7 +156,8 @@ background-size: cover;
   transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -183,15 +180,38 @@ background-size: cover;
   transition-duration: 1s;
 }
 
-/* ProjectCardAnimated2 Styles */
-
-.hero_content::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Color negro con opacidad */
-  z-index: 10;
+@media screen and (max-width: 768px) {
+  .hero_content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0)
+    ); 
+    z-index: -2;
+  }
 }
+
+@media screen and (max-width: 1024px) {
+  .hero_content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0)
+    ); 
+    z-index: -2;
+  }
+}
+
+

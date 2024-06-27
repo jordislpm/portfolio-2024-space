@@ -15,7 +15,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   return (
     <div
       onClick={handleFlip}
-      className='border border-[#2A0E61] max-w-500 md:h-[350px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000'
+      className='border border-[#2A0E61] max-w-500 md:h-[450px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000'
     >
       <div
         className={`flip-card-inner w-full h-full transition-transform duration-600 transform ${isFlipped ? 'rotate-y-180' : ''}`}

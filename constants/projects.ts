@@ -28,8 +28,8 @@ export const myProjects = [
     },
     {
         src: "/projects/geomatic-landing.png",
-        title: "Surveying Landing page",
-        description: "This project serves as a landing page template tailored for surveying or geospatial-related businesses. With a clean and modern design, it aims to showcase the services offered by a surveying company, such as land surveying, cartography, and georeferencing. The landing page provides essential information about the company's expertise, team, and contact details, helping to attract potential clients and establish credibility in the industry.",
+        title: "Surveying Landing Page",
+        description: "Landing page template for surveying businesses, showcasing services like land surveying, cartography, and georeferencing. Includes company info, team details, and contact information.",
         repository: "https://github.com/jordislpm/geomatic-d-pena",
         liveCode: "https://geomatic-d-pena.vercel.app/",
         technologies: ["HTML", "CSS", "TypeScript", "React", "Next 14"],
