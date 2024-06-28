@@ -11,7 +11,7 @@ export const myProjects = [
     {
         src: "/projects/helebba.png",
         title: "Helebba: Business administration",
-        description: "I have been actively contributing to this project as part of my role at Nevobit. I played a key role in implementing the entire front-end, and this was the first project where I also took on some basic back-end tasks.",
+        description: "A software for managing invoicing, accounting, inventory, CRM, projects, and HR from one platform. At Nevobit, I played a key role in implementing front-end and took on some basic back-end tasks.",
         repository: "https://github.com/nevobit/helebba-monorepo",
         liveCode: "https://www.helebba.com/",
         technologies: ["HTML", "CSS", "TypeScript", "React", "React Toolkit", "Next 13", "Node js"],
