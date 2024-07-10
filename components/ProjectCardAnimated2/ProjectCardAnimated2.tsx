@@ -15,17 +15,17 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   return (
     <div
       onClick={handleFlip}
-      className='border border-[#2A0E61] max-w-500 md:h-[450px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000'
+      className='border border-[#2A0E61] max-w-500 md:h-[450px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000 backface-hidden overflow-hidden'
     >
       <div
         className={`flip-card-inner w-full h-full transition-transform duration-600 transform ${isFlipped ? 'rotate-y-180' : ''}`}
       >
         <div
           style={{ backgroundImage: `url(${src})` }}
-          className='w-full h-full group relative flip-card-front bg-cover bg-center text-white rounded-lg p-4 backface-hidden'
+          className='w-full h-full group relative flip-card-front bg-cover bg-center text-white rounded-lg p-4 backface-hidden transition-transform duration-500 hover:scale-105'
         >
           <div className='absolute inset-0 w-full h-full rounded-md bg-black opacity-0 group-hover:opacity-40' />
-          <div className='absolute inset-0 w-full h-full text-[20px] pb-10 hidden group-hover:flex items-center justify-center'>
+          <div className='absolute inset-0 w-full h-full text-[15px] pb-10 hidden group-hover:flex items-center justify-center'>
             Learn more &gt;
           </div>
         </div>
