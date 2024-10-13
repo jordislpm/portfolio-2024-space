@@ -26,17 +26,17 @@ export const Experiences = [
       icon: "/experience/nevobit.png",
     },
     {
-      title: "Junior Frontend Developer",
+      title: "Frontend Developer",
       location: "Colombia (Remote)",
       company: "Nevobit",
       description:
         "I joined a product development team, developing and maintaining web applications using Next.js. I was responsible for developing entire frontends for some projects, and for others, I collaborated with colleagues. I implemented global state management and API connections using Redux Toolkit.",
       technologies: ["HTML5", "CSS", "JavaScript","TypeScript", "React.js", "Next.js", "Redux Toolkit", "Git", "GitHub"],
-      date: "May 2023 - Present",
+      date: "May 2023 - August 2024",
       icon: "/experience/nevobit.png",
     },
     {
-      title: "Trainee Full Stack Developer",
+      title: "Full Stack Developer",
       location: "Colombia (Remote)",
       company: "Nevobit",
       description:
@@ -57,7 +57,7 @@ export const Experiences = [
         "Git",
         "GitHub",
       ],
-      date: "May 2024 - Present",
+      date: "May 2024 - August 2024",
       icon: "/experience/nevobit.png",
     },
   ];
