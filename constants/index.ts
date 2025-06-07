@@ -1,3 +1,6 @@
+import { BsLinkedin } from "react-icons/bs";
+import { FaDiscord } from "react-icons/fa6";
+
 export const Skill_data = [
   {
     skill_name: "Html 5",
@@ -89,12 +92,14 @@ export const Socials = [
   {
     name: "Linkedin",
     src: "/linkedin-white.svg",
-    link: "https://www.linkedin.com/in/juan-tomas-de-pena-medina/"
+    link: "https://www.linkedin.com/in/juan-tomas-de-pena-medina/",
+    icon: BsLinkedin,
   },
   {
     name: "Discord",
     src: "/discord-white.svg",
-    link: "https://discord.com/users/jordislpm"
+    link: "https://discord.com/users/jordislpm",
+    icon: FaDiscord,
   },
 ];
 
@@ -215,7 +220,7 @@ export const Backend_skill = [
 ];
 
 export const Full_stack = [
-    {
+  {
     skill_name: "AWS",
     Image_src: "/aws.png",
     width: 70,

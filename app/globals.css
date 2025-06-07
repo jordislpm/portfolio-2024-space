@@ -35,6 +35,15 @@
   transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
 }
 
+.button-color-hover{
+  color: white;
+  transition: color .2s;
+}
+
+.button-color-hover:hover{
+  color: #06b6d4;
+}
+
 .button-primary {
   background: linear-gradient(
       180deg,

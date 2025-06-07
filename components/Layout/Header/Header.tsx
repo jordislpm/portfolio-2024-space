@@ -5,6 +5,11 @@ import Nav from '../Nav/Nav';
 import { Socials } from '@/constants';
 import MenuBurger from '@/components/MenuBurger/MenuBurger';
 
+import {
+    BsLinkedin
+} from "react-icons/bs";
+import { FaDiscord } from "react-icons/fa6";
+
 
 function Header() {
     const [scroll, setScroll] = useState<boolean>(false);
@@ -25,28 +30,28 @@ function Header() {
         };
     }, [scroll]);
 
-     // Función para comprobar si la pantalla es "md" o mayor
-  const checkScreenSize = () => {
-    setShowNav(window.innerWidth >= 768); // Breakpoint "md" es 768px
-  };
-
-  useEffect(() => {
-    // Comprueba el tamaño de la pantalla al montar
-    checkScreenSize();
-
-    // Listener para cambios en el tamaño de la pantalla
-    const handleResize = () => {
-      checkScreenSize();
+    // Función para comprobar si la pantalla es "md" o mayor
+    const checkScreenSize = () => {
+        setShowNav(window.innerWidth >= 768); // Breakpoint "md" es 768px
     };
 
-    window.addEventListener('resize', handleResize); // Añade el listener para el evento "resize"
+    useEffect(() => {
+        // Comprueba el tamaño de la pantalla al montar
+        checkScreenSize();
 
-    // Limpieza: elimina el listener al desmontar el componente
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); // Solo se ejecuta al montar y desmontar el componente
-    const showMenu = ()=>{
+        // Listener para cambios en el tamaño de la pantalla
+        const handleResize = () => {
+            checkScreenSize();
+        };
+
+        window.addEventListener('resize', handleResize); // Añade el listener para el evento "resize"
+
+        // Limpieza: elimina el listener al desmontar el componente
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []); // Solo se ejecuta al montar y desmontar el componente
+    const showMenu = () => {
         setShowNav(!showNav)
     }
 
@@ -60,32 +65,27 @@ function Header() {
                         height={70}
                         width={70}
                         className='cursor-pointer hover:animation-slowpin' />
-                    <span className='font-bold ml-[10px] hidden lg:block text-gray-300 hover:text-[#06b6d4]'>
+                    <span className='font-bold ml-[10px] hidden lg:block text-gray-300 button-color-hover'>
                         JordisDev Porfolio
                     </span>
                 </a>
                 <div className='w-[500px] relative h-full flex flex-row items-center justify-between md:mr-20'>
-                 { showNav && <Nav />}
+                    {showNav && <Nav />}
                 </div>
                 <div className='flex flex-row gap-5'>
-                    {Socials.map((social) => (
-                        <a key={social.name}
-                        href={social.link}
-                        target='_blank'
-                        className='flex justify-center items-center'>
-                        <Image
-                            className='cursor-pointer w-full h-full md:w-[30px]'
-                            src={social.src}
-                            alt={social.name}
-                            key={social.name}
-                            width={24}
-                            height={24} />
-                            </a>
+                    {Socials.map(({ name, link, icon: Icon }, index) => (
+                        <a key={name}
+                            href={link}
+                            target='_blank'
+                            className='flex justify-center items-center button-color-hover'>
+                            <Icon className="button-color-hover" size={28} />
+                        </a>
+
                     ))
                     }
                 </div>
                 <MenuBurger onChildClick={showMenu}
-                openMenu={showNav}/>
+                    openMenu={showNav} />
             </div>
         </div>
     )
