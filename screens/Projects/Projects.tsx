@@ -30,7 +30,7 @@ offset:["0 1", "1.33 1"]
       >
          {myProjects.map((project) => (
           <React.Fragment key={project.title}>
-            <ProjectCardAnimated2 {...project} />
+            <ProjectCardAnimated2 project={project} />
           </React.Fragment>
         ))}
       </div>

@@ -1,3 +1,4 @@
+import React from "react";
 
 export interface typeSkillDataProvider{
     Image_src: string;
@@ -18,7 +19,9 @@ export interface typeProjectCard{
     liveCode: string;
     repository:string;
     technologies: string[];
-    stackType: string
+    stackType: string;
+    alert?: boolean;
+    company: string;
 }
 
 export interface typeMyProjects{
@@ -44,4 +47,5 @@ export interface CardProjectLinkProps {
     link: string;
     name: string;
     img: string;
+    alert?: boolean;
 }
