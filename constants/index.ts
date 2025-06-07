@@ -161,6 +161,12 @@ export const Skill_data = [
       width: 80,
       height: 80,
     },
+     {
+      skill_name: "Stripe",
+      Image_src: "/stripe.webp",
+      width: 80,
+      height: 80,
+    },
   ];
   
   export const Backend_skill = [
@@ -197,6 +203,12 @@ export const Skill_data = [
     {
       skill_name: "Graphql",
       Image_src: "/graphql.png",
+      width: 80,
+      height: 80,
+    },
+      {
+      skill_name: "Prisma",
+      Image_src: "/prisma.webp",
       width: 80,
       height: 80,
     },
