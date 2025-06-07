@@ -15,7 +15,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
   return (
     <div
       onClick={handleFlip}
-      className='border border-[#2A0E61] max-w-500 md:h-[450px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000 backface-hidden overflow-hidden'
+      className='border border-[#2A0E61] border-[2px] hover:border-[#06b6d4] max-w-500 md:h-[450px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000 backface-hidden overflow-hidden'
     >
       <div
         className={`flip-card-inner w-full h-full transition-transform duration-600 transform ${isFlipped ? 'rotate-y-180' : ''}`}
@@ -31,7 +31,7 @@ const ProjectCardAnimated = ({ src, title, description, repository, liveCode, te
         </div>
         <div
           style={{ backgroundImage: `url(${src})` }}
-          className='w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-lg transform rotate-y-180 backface-hidden'
+          className='w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-md transform rotate-y-180 backface-hidden'
         >
           <div className='flex flex-col w-full h-full justify-around items-center p-1 bg-black opacity-85'>
             <h1 className='text-2xl font-semibold text-white'>{title}</h1>
