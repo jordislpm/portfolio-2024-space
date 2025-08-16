@@ -40,6 +40,23 @@ export const myProjects: typeProjectCard[] = [
     stackType: "frontend",
     alert: true,
   },
+   {
+  company: "personal",
+  src: "/projects/ecommerce-oli-store.png",
+  title: "Oli Store E-commerce",
+  description:
+    "Custom e-commerce platform developed with a modern frontend in React/Next.js and a headless backend powered by Wix. Includes product catalog, shopping cart, checkout, and payment integration, designed with a clean and minimalistic UI for a professional online store experience.",
+  repository: "https://github.com/jordislpm/ecommerce-clone-template-spanish", 
+  liveCode: "https://ecommerce-clone-template-spanish.vercel.app/", 
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "TailwindCSS",
+    "Wix Headless API",
+  ],
+  stackType: "frontend + headless backend",
+},
   {
     company: "personal",
     src: "/projects/real-estate-app.png",
