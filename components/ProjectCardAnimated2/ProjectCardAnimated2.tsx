@@ -10,20 +10,22 @@ interface ProjectCardAnimatedProps {
 }
 
 const ProjectCardAnimated = ({ project}: ProjectCardAnimatedProps) => {
-  const { src, title, description, repository, liveCode, technologies, stackType, alert } =project
+  const { src, title, description, repository, liveCode, technologies, stackType, alert, liveCode_state, repository_state } =project
   const [isFlipped, setIsFlipped] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [alertType, setAlertType] = useState<'liveCode' | 'repository' | null>(null);
 
   const handleFlip = (e: React.MouseEvent) => {
     setIsFlipped(!isFlipped);
     e.stopPropagation();
   };
 
-  const checkOpenModal = (e: React.MouseEvent, alert: boolean | undefined) => {
+  const checkOpenModal = (e: React.MouseEvent, alert: boolean | undefined, type: 'liveCode' | 'repository' | null) => {
 
-    if (alert) {
+    if (!alert) {
   
       console.log("open the modal")
+      setAlertType(type);
       setIsModalOpen(true)
       e.stopPropagation();
     }
@@ -33,12 +35,15 @@ const ProjectCardAnimated = ({ project}: ProjectCardAnimatedProps) => {
   return (
     <div className='relative w-full h-full'>
       <PopUpAlertProjectLink 
+
       isOpen={isModalOpen} 
       setIsOpen={setIsModalOpen}
-      project={project} />
+      project={project} 
+      type={alertType}/>
+
       <div
         onClick={handleFlip}
-        className='border border-[#2A0E61] border-[2px] hover:border-[#06b6d4] max-w-500 md:h-[450px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000 backface-hidden overflow-hidden'
+        className='border-[#2A0E61] border-[2px] hover:border-[#06b6d4] max-w-500 md:h-[450px] sm:h-[350px] h-[450px] rounded-md cursor-pointer perspective-1000 backface-hidden overflow-hidden'
       >
 
         <div
@@ -79,11 +84,15 @@ const ProjectCardAnimated = ({ project}: ProjectCardAnimatedProps) => {
                     img={source.src}
                     name={source.name}/>
                 ))} */}
-                  <div onClick={(e) => checkOpenModal(e, alert)}>
-                    <CardProjectLink link={liveCode} img={"/link.svg"} name='link' alert={alert} />
+                  <div 
+                  onClick={(e) => checkOpenModal(e, liveCode_state, 'liveCode')}
+                  >
+                    <CardProjectLink link={liveCode} img={"/link.svg"} name='link' alert={liveCode_state} project={project} />
                   </div>
-                  <div onClick={(e) => checkOpenModal(e, alert)}>
-                    <CardProjectLink link={repository} img={"/github.svg"} name='link' />
+                  <div 
+                  onClick={(e) => checkOpenModal(e, repository_state, 'repository')}
+                  >
+                    <CardProjectLink link={repository} img={"/github.svg"} name='link' alert={repository_state} project={project} />
                   </div>
                 </div>
               </div>

@@ -4,61 +4,79 @@ import React from 'react';
 type PopUpProps = {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
-  project: typeProjectCard
+  project: typeProjectCard;
+  type: 'liveCode' | 'repository' | null;
 };
 
-function PopUpAlertProjectLink({ isOpen, setIsOpen, project }: PopUpProps) {
+function PopUpAlertProjectLink({ isOpen, setIsOpen, project, type }: PopUpProps) {
+  const message =
+    type === 'liveCode'
+      ? "The live site is no longer online, but the project is kept to show my participation in a full real-world project."
+      : project.repositoryMessage || "The repository is not available.";
+
   return (
     <div>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-xl p-6 shadow-lg max-w-md w-full relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-xl max-w-2xl w-full relative overflow-y-auto max-h-[90vh] border border-purple-300">
+            
             {/* Close button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-xl"
+              className="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl font-bold transition-colors"
             >
               &times;
             </button>
 
             {/* Title */}
-            <h2 className="text-xl font-semibold text-yellow-600 mb-3">⚠️ Website Currently Unavailable</h2>
+            <h2 className="text-2xl font-bold text-purple-600 mb-4">⚠️ Link Unavailable</h2>
 
-            {/* Apology message */}
-            <div className="text-gray-700 space-y-3 text-sm">
-              <p>
-                Unfortunately, the{' '}
-                <span
-                  className="text-black-600"
-                >
-                 <strong>{project.title}</strong> 
-                </span>{' '}
-                website is currently offline because the company has closed operations.
-              </p>
+            {/* Message and content */}
+            <div className="text-gray-800 space-y-4 text-sm md:text-base">
+              <p>{message}</p>
+
               <p>
                 I’ve chosen to keep this project in my portfolio because it was a{' '}
-                <strong>real-world product</strong> and an important part of my work at <strong>{project.company}</strong>. I contributed significantly to the frontend and supported backend development.
+                <strong>real-world project</strong> and an important part of my work at{' '}
+                <strong>{project.company}</strong>. I contributed significantly to the frontend and supported backend development.
               </p>
-              <p>
-                You can still explore the{' '}
-                <a
-                  href={project.repository}
-                  target="_blank"
-                  className="text-blue-600 underline"
-                >
-                  GitHub repository
-                </a>{' '}
-                and check out the{' '}
-                <a
-                  href="https://www.npmjs.com/package/helebba-sdk"
-                  target="_blank"
-                  className="text-blue-600 underline"
-                >
-                  npm SDK
-                </a>{' '}
-                we built.
-              </p>
-              <p>
+
+              {project.repository_state && (
+                <p>
+                  You can still explore the{' '}
+                  <a href={project.repository} target="_blank" className="text-purple-600 underline hover:text-purple-400">
+                    GitHub repository
+                  </a>
+                  {type === 'liveCode' && ' to see the code.'}
+                </p>
+              )}
+
+              {project.liveCode_state && type === 'repository' && (
+                <p>
+                  You can still visit the{' '}
+                  <a href={project.liveCode} target="_blank" className="text-purple-600 underline hover:text-purple-400">
+                    live site
+                  </a>{' '}
+                  if available.
+                </p>
+              )}
+
+              {project.demo && (
+                <div className="mt-4">
+                  <h3 className="font-semibold mb-2 text-purple-700">Demo Video:</h3>
+                  <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                      src={project.demo}
+                      title={`${project.title} demo`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+              )}
+
+              <p className="mt-2">
                 Meanwhile, feel free to look through my other projects to see more of my work!
               </p>
             </div>
@@ -66,7 +84,7 @@ function PopUpAlertProjectLink({ isOpen, setIsOpen, project }: PopUpProps) {
             {/* Close button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="mt-5 w-full py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+              className="mt-5 w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white rounded-xl font-semibold transition-all"
             >
               Close
             </button>

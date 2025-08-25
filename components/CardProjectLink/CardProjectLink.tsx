@@ -8,12 +8,13 @@ import { CardProjectLinkProps } from '@/types';
 function CardProjectLink({ link, name, img, alert }: CardProjectLinkProps) {
 
 
-  if (alert) {
+  if (!alert) {
     return (
       <div
         className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-60 hover:border hover:border-[#06b6d4]'
         rel="noopener noreferrer"
       >
+        
         <Image
           className='project_link'
           src={img}
@@ -42,7 +43,6 @@ function CardProjectLink({ link, name, img, alert }: CardProjectLinkProps) {
         />
       </a>
     )
-
   }
 
 }

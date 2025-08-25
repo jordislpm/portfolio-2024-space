@@ -17,11 +17,16 @@ export interface typeProjectCard{
     title: string;
     description: string;
     liveCode: string;
+    liveCode_state: boolean;
+    repository_state: boolean;
     repository:string;
     technologies: string[];
     stackType: string;
     alert?: boolean;
     company: string;
+    demo?: string;
+    repositoryMessage?: string;
+    liveCodeMessage?: string;
 }
 
 export interface typeMyProjects{
@@ -48,4 +53,5 @@ export interface CardProjectLinkProps {
     name: string;
     img: string;
     alert?: boolean;
+    project: typeProjectCard;
 }
