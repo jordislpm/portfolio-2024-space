@@ -43,6 +43,19 @@ export const myProjects: typeProjectCard[] = [
   },
   {
     company: "personal",
+    src: "/projects/ReactFlix.png",
+    title: "ReactFlix",
+    repository_state: true,
+    liveCode_state: true,
+    description:
+      "Final React project completed collaboratively as part of a study group led by Professor Francis Fulgencio. The application displays movie listings from The Movie Database (TMDb) API, including search, dynamic filtering, and detailed movie pages. Features structured Git workflow, component organization, and API state management.",
+    repository: "https://github.com/Tutorias-de-programacion/ReactFinalProject",
+    liveCode: "https://react-flix-beryl.vercel.app/",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "node"],
+    stackType: "frontend",
+  },
+  {
+    company: "personal",
     src: "/projects/safe-rent-car.png",
     title: "Safe Rent Car",
     repository_state: true,
