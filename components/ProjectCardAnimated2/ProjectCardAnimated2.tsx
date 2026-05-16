@@ -62,7 +62,7 @@ const ProjectCardAnimated = ({ project}: ProjectCardAnimatedProps) => {
             style={{ backgroundImage: `url(${src})` }}
             className='w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-md transform rotate-y-180 backface-hidden'
           >
-            <div className='flex flex-col w-full h-full justify-around items-center p-1 bg-black opacity-85'>
+<div className="flex flex-col w-full h-full items-center gap-3 p-3 bg-black/85 overflow-y-auto custom-scrollbar">
               <h1 className='text-2xl font-semibold text-white'>{title}</h1>
               <div className='flex w-full flex-col justify-around gap-1 min-h-[100px]'>
                 <div>

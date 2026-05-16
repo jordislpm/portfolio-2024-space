@@ -2,6 +2,38 @@ import PopUpAlertProjectLink from "@/components/PopUpAlertProjectLink";
 import { typeProjectCard } from "@/types";
 
 export const myProjects: typeProjectCard[] = [
+ {
+    company: "Bill Med International Inc.",
+    src: "/projects/Medinet.png",
+    title: "Bill Med International: Medical Billing & Claims Management System",
+    repository_state: false,
+    liveCode_state: false,
+    repositoryMessage:
+      "This repository is private because it contains proprietary business logic and healthcare-related operational workflows.",
+    liveCodeMessage:
+      "The live system is private and used internally, but the project is included to showcase my real-world full-stack software development experience.",
+    description:
+      "Full-stack medical management platform developed for international medical billing and healthcare operations. The system manages patient cases, insurance claims, invoices, payments, financial reports, claim follow-ups, notifications, and PDF invoice/claim generation. I work across the frontend and backend, building reusable UI components, dynamic tables, filters, dashboards, REST API endpoints, database models, reporting logic, role-based access control, and workflow automation for real business operations.",
+    repository: "",
+    liveCode: "",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+      "REST APIs",
+      "TanStack React Query",
+      "Zustand",
+      "Tailwind CSS",
+      "Docker",
+      "Postman",
+      "jsPDF",
+    ],
+    stackType: "fullstack",
+  },
   {
     company: "personal",
     src: "/projects/ecommerce-oli-store.png",
