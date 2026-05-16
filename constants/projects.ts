@@ -2,7 +2,7 @@ import PopUpAlertProjectLink from "@/components/PopUpAlertProjectLink";
 import { typeProjectCard } from "@/types";
 
 export const myProjects: typeProjectCard[] = [
- {
+  {
     company: "Bill Med International Inc.",
     src: "/projects/Medinet.png",
     title: "Bill Med International: Medical Billing & Claims Management System",
@@ -15,7 +15,7 @@ export const myProjects: typeProjectCard[] = [
     description:
       "Full-stack medical management platform developed for international medical billing and healthcare operations. The system manages patient cases, insurance claims, invoices, payments, financial reports, claim follow-ups, notifications, and PDF invoice/claim generation. I work across the frontend and backend, building reusable UI components, dynamic tables, filters, dashboards, REST API endpoints, database models, reporting logic, role-based access control, and workflow automation for real business operations.",
     repository: "",
-    liveCode: "",
+    liveCode: "https://app.medinet.solutions/",
     technologies: [
       "Next.js",
       "React",
@@ -35,6 +35,54 @@ export const myProjects: typeProjectCard[] = [
     stackType: "fullstack",
   },
   {
+    company: "Nevobit",
+    src: "/projects/helebba.png",
+    title: "Helebba: Business Administration",
+    repository_state: false,
+    liveCode_state: false,
+    repositoryMessage:
+      "The repository is private and cannot be shared, but it reflects my frontend contributions.",
+    liveCodeMessage:
+      "The live site is no longer online, but the project is kept to show my participation in a full real-world project.",
+    description:
+      "A software for managing invoicing, accounting, inventory, CRM, projects, and HR from a single platform. I contributed heavily to frontend development and assisted with some backend tasks.",
+    repository: "https://github.com/nevobit/helebba-monorepo",
+    liveCode: "https://www.helebba.com/",
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React",
+      "React Toolkit",
+      "Next 13",
+      "Node.js",
+    ],
+    stackType: "frontend",
+  },
+  {
+    company: "Nevobit",
+    src: "/projects/itaaj-realty.png",
+    title: "Itaaj Realty: Real Estate Page",
+    repository_state: false,
+    liveCode_state: false,
+    repositoryMessage: "This repository is private and cannot be accessed.",
+    liveCodeMessage:
+      "The live site is offline, but the project is included to showcase my real-world frontend experience.",
+    description:
+      "As part of my work at Nevobit in 2023, I developed a comprehensive front-end interface for a real estate platform, allowing users to buy, sell, and rent properties.",
+    repository: "https://github.com/nevobit/itaaj-monorepo",
+    liveCode: "https://www.itaajrealty.com/",
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React",
+      "Next 13",
+      "Redux Toolkit",
+    ],
+    stackType: "frontend",
+  },
+  {
     company: "personal",
     src: "/projects/ecommerce-oli-store.png",
     title: "Oli Store E-commerce",
@@ -44,7 +92,13 @@ export const myProjects: typeProjectCard[] = [
       "Custom e-commerce platform developed with a modern frontend in React/Next.js and a headless backend powered by Wix. Includes product catalog, shopping cart, checkout, and payment integration, designed with a clean and minimalistic UI for a professional online store experience.",
     repository: "https://github.com/jordislpm/oli_store",
     liveCode: "https://ecommerce-clone-template.vercel.app/",
-    technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Wix Headless API"],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Wix Headless API",
+    ],
     stackType: "frontend + headless backend",
   },
   {
@@ -57,7 +111,14 @@ export const myProjects: typeProjectCard[] = [
       "Fullstack real estate application featuring property listings, user authentication, live chat via sockets, and post management. Built with React, Express, and MongoDB, tailored for real-world listings in Las Terrenas.",
     repository: "https://github.com/jordislpm/terrenas_realty",
     liveCode: "https://terrenas-realty.vercel.app/",
-    technologies: ["React 19", "TypeScript", "Express", "MongoDB", "Socket.IO", "Prisma"],
+    technologies: [
+      "React 19",
+      "TypeScript",
+      "Express",
+      "MongoDB",
+      "Socket.IO",
+      "Prisma",
+    ],
     stackType: "fullstack",
   },
   {
@@ -96,7 +157,14 @@ export const myProjects: typeProjectCard[] = [
       "A great personal project for renting cars, where you can choose the vehicle of your choice and rent it for a good price. Currently it is a frontend project that obtains data from a public API, it is a project that is still in development and my goal is to create my own backend and make it a complete fullstack project, with its own database of cars and users.",
     repository: "https://github.com/jordislpm/safe-rent-car",
     liveCode: "https://safe-rent-car.vercel.app/",
-    technologies: ["HTML", "CSS", "TypeScript", "React", "Next 14", "Tailwind CSS"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React",
+      "Next 14",
+      "Tailwind CSS",
+    ],
     stackType: "frontend",
   },
   {
@@ -112,35 +180,4 @@ export const myProjects: typeProjectCard[] = [
     technologies: ["HTML", "CSS", "JavaScript", "React"],
     stackType: "frontend",
   },
-  {
-    company: "Nevobit",
-    src: "/projects/itaaj-realty.png",
-    title: "Itaaj Realty: Real Estate Page",
-    repository_state: false,
-    liveCode_state: false,
-    repositoryMessage: "This repository is private and cannot be accessed.",
-    liveCodeMessage: "The live site is offline, but the project is included to showcase my real-world frontend experience.",
-    description:
-      "As part of my work at Nevobit in 2023, I developed a comprehensive front-end interface for a real estate platform, allowing users to buy, sell, and rent properties.",
-    repository: "https://github.com/nevobit/itaaj-monorepo",
-    liveCode: "https://www.itaajrealty.com/",
-    technologies: ["HTML", "CSS", "TypeScript", "React", "Next 13", "Redux Toolkit"],
-    stackType: "frontend",
-  },
-  {
-    company: "Nevobit",
-    src: "/projects/helebba.png",
-    title: "Helebba: Business Administration",
-    repository_state: false,
-    liveCode_state: false,
-    repositoryMessage: "The repository is private and cannot be shared, but it reflects my frontend contributions.",
-    liveCodeMessage: "The live site is no longer online, but the project is kept to show my participation in a full real-world project.",
-    description:
-      "A software for managing invoicing, accounting, inventory, CRM, projects, and HR from a single platform. I contributed heavily to frontend development and assisted with some backend tasks.",
-    repository: "https://github.com/nevobit/helebba-monorepo",
-    liveCode: "https://www.helebba.com/",
-    technologies: ["HTML", "CSS", "TypeScript", "React", "React Toolkit", "Next 13", "Node.js"],
-    stackType: "frontend",
-  },
 ];
-
