@@ -42,11 +42,21 @@ function HeroContent() {
                     </span>
 
                 </motion.div>
-                <motion.p
-                    variants={slideInFromLeft(.08)}
-                    className='text-lg text-gray-400 my-5 max-w-[600px] z-[20]'>
-                    I&apos;m Juan tomas but everybody calls me Jordis. I&apos;m a fullstack web developer with expertise in JavaScript. After completing a programming bootcamp in 2022, I&apos;ve continued honing my skills through personal projects and have been professionally working as a frontend developer since January 2023. I thrive on challenging projects where I can learn and create products that are both useful and professional. I&apos;m ready to bring my experience to your team!
-                </motion.p>
+  <motion.p
+  variants={slideInFromLeft(0.08)}
+  className="text-lg text-gray-400 my-5 max-w-[600px] z-[20]"
+>
+  I&apos;m Juan Tomas, but most people call me Jordis. I&apos;m a full-stack
+  web developer focused on building modern, scalable, and user-friendly web
+  applications with JavaScript, TypeScript, React, Next.js, Node.js, Express,
+  and PostgreSQL. Since completing my programming bootcamp in 2022, I&apos;ve
+  continued growing through real-world work, personal projects, and full-stack
+  development experience. I currently build software solutions for medical
+  billing, claims management, reporting, and business operations, combining
+  frontend development, backend logic, database design, and practical
+  problem-solving. I&apos;m looking for an opportunity to contribute to a
+  professional development team and help build reliable, high-quality software.
+</motion.p>
                 <motion.a
                     href='https://wa.link/06tqcw'
                     target='_blank'
