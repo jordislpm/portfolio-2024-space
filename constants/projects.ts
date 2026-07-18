@@ -83,6 +83,29 @@ export const myProjects: typeProjectCard[] = [
     stackType: "frontend",
   },
   {
+    company: "Bill Med International Inc.",
+    src: "/projects/billmed-landing.png",
+    title: "Bill Med International: Corporate Landing Page",
+    repository_state: false,
+    liveCode_state: true,
+    repositoryMessage:
+      "This repository is private because it contains proprietary design assets and branding configuration for Bill Med International Inc.",
+    description:
+      "Official multi-lingual corporate landing page for BillMed International Inc. Built to connect international travelers, healthcare providers, and insurance companies under one coordinated network. Features a modern dark/light mode UI, smooth animations with Framer Motion, multi-language toggles (EN/ES), interactive sections showcasing core pillars and team members, and fully responsive layouts.",
+    repository: "",
+    liveCode: "https://www.billmedinternational.com/",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide Icons",
+      "SEO Optimization",
+    ],
+    stackType: "frontend",
+  },
+  {
     company: "personal",
     src: "/projects/ecommerce-oli-store.png",
     title: "Oli Store E-commerce",

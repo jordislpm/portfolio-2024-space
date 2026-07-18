@@ -50,7 +50,13 @@ const ProjectCardAnimated = ({ project}: ProjectCardAnimatedProps) => {
           className={`flip-card-inner w-full h-full transition-transform duration-600 transform ${isFlipped ? 'rotate-y-180' : ''}`}
         >
           <div
-            style={{ backgroundImage: `url(${src})` }}
+            style={{ 
+              backgroundImage: `url(${src})`,
+              backgroundSize: src.includes("billmed-landing") ? "contain" : "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundColor: src.includes("billmed-landing") ? "#03080e" : "transparent"
+            }}
             className='w-full h-full group relative flip-card-front bg-cover bg-center text-white rounded-lg p-4 backface-hidden transition-transform duration-500 hover:scale-105'
           >
             <div className='absolute inset-0 w-full h-full rounded-md bg-black opacity-0 group-hover:opacity-40' />
@@ -59,7 +65,13 @@ const ProjectCardAnimated = ({ project}: ProjectCardAnimatedProps) => {
             </div>
           </div>
           <div
-            style={{ backgroundImage: `url(${src})` }}
+            style={{ 
+              backgroundImage: `url(${src})`,
+              backgroundSize: src.includes("billmed-landing") ? "contain" : "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundColor: src.includes("billmed-landing") ? "#03080e" : "transparent"
+            }}
             className='w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-md transform rotate-y-180 backface-hidden'
           >
 <div className="flex flex-col w-full h-full items-center gap-3 p-3 bg-black/85 overflow-y-auto custom-scrollbar">
