@@ -69,7 +69,7 @@ function HeroContent() {
           className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 my-2 w-full max-w-[620px] z-[20]"
         >
           <div className="p-3 rounded-xl bg-[#0a051ee6] border border-purple-500/30 backdrop-blur-md shadow-sm">
-            <div className="text-cyan-400 font-bold text-lg sm:text-xl">2+ Years</div>
+            <div className="text-cyan-400 font-bold text-lg sm:text-xl">3+ Years</div>
             <div className="text-gray-400 text-xs mt-0.5">Production Experience</div>
           </div>
           <div className="p-3 rounded-xl bg-[#0a051ee6] border border-purple-500/30 backdrop-blur-md shadow-sm">
