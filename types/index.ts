@@ -40,11 +40,12 @@ export interface typesTypingAnimation{
 }
 
 export interface TypeExperience {
-    date: string,
-    title:string,
-    company: string,
-    description: string,
-    technologies: string[]
+    date: string;
+    title: string;
+    company: string;
+    location?: string;
+    description: string;
+    technologies: string[];
     icon: string;
 }
 

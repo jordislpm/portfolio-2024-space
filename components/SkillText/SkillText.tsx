@@ -1,38 +1,45 @@
 "use client"
 import React from 'react'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utilities/motion'
 import { SparklesIcon } from '@heroicons/react/24/solid'
 import TypingAnimation from '../TypingAnimation/TypingAnimation'
 
 const SkillText = () => {
   return (
-    <div className='w-full h-auto flex flex-col items-center justify-center'>
-<motion.div
-          variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
-        >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">
-            Think better with Next js 13
-          </h1>
-        </motion.div>
-        <motion.div
+    <div className='w-full h-auto flex flex-col items-center justify-center px-4'>
+      <motion.div
+        variants={slideInFromTop}
+        className="Welcome-box py-[8px] px-3 border border-[#7042f88b] opacity-[0.95] backdrop-blur-md"
+      >
+        <SparklesIcon className="text-[#b49bff] mr-2 h-5 w-5 animate-pulse" />
+        <h1 className="Welcome-text text-[13px] font-semibold">
+          Modern Tech Stack with Next.js 14
+        </h1>
+      </motion.div>
+
+      <motion.div
         variants={slideInFromLeft(0.5)}
-        className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'
-        >
-            Making apps with modern technologies
-        </motion.div>
-        <motion.div
+        className='text-[28px] sm:text-[34px] text-white font-bold mt-[12px] text-center mb-[10px]'
+      >
+        Building scalable apps with modern technologies
+      </motion.div>
+
+      <motion.div
         variants={slideInFromRight(0.5)}
-        className='text-[30px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10 mt-[10px] text-center'
-        >
-            <TypingAnimation
-            className='text-[30px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10 mt-[10px] text-center'
-            time={2000}
-            textOptions={["Never miss a task", "Never miss a deadline", "Never miss a idea"]}
-            />
-        </motion.div>
+        className='text-[24px] sm:text-[30px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-8 mt-[5px] text-center'
+      >
+        <TypingAnimation
+          className='text-[22px] sm:text-[28px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-cyan-400 to-cyan-500 mb-6 text-center'
+          time={2000}
+          textOptions={[
+            "Clean code architecture",
+            "Scalable full-stack logic",
+            "High-performance user interfaces",
+            "Reliable production systems"
+          ]}
+        />
+      </motion.div>
     </div>
   )
 }
