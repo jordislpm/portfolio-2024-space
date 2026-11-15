@@ -1,20 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
-import { CardProjectLinkProps } from '@/types';
-
-
-
+import { CardProjectLinkProps } from '@/types'
 
 function CardProjectLink({ link, name, img, alert }: CardProjectLinkProps) {
-
-
   if (!alert) {
     return (
       <div
+        onClick={(e) => e.stopPropagation()}
         className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-60 hover:border hover:border-[#06b6d4]'
         rel="noopener noreferrer"
       >
-        
         <Image
           className='project_link'
           src={img}
@@ -28,6 +23,7 @@ function CardProjectLink({ link, name, img, alert }: CardProjectLinkProps) {
   } else {
     return (
       <a
+        onClick={(e) => e.stopPropagation()}
         className='flex button-primary cursor-pointer p-2 w-[40px] rounded z-60 hover:border hover:border-[#06b6d4]'
         href={link}
         target="_blank"
@@ -44,7 +40,6 @@ function CardProjectLink({ link, name, img, alert }: CardProjectLinkProps) {
       </a>
     )
   }
-
 }
 
-export default CardProjectLink;
+export default CardProjectLink

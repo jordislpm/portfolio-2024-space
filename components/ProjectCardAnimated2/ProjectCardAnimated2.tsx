@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { typeProjectCard } from '@/types'
-import CardProjectLink from '../CardProjectLink/CardProjectLink'
 import PopUpAlertProjectLink from '../PopUpAlertProjectLink'
 
 interface ProjectCardAnimatedProps {
@@ -26,20 +26,26 @@ const ProjectCardAnimated2 = ({ project }: ProjectCardAnimatedProps) => {
   const [alertType, setAlertType] = useState<'liveCode' | 'repository' | null>(null)
 
   const handleFlip = (e: React.MouseEvent) => {
-    setIsFlipped(!isFlipped)
     e.stopPropagation()
+    setIsFlipped((prev) => !prev)
   }
 
-  const checkOpenModal = (
-    e: React.MouseEvent,
-    alert: boolean | undefined,
-    type: 'liveCode' | 'repository' | null
-  ) => {
-    if (!alert) {
-      setAlertType(type)
-      setIsModalOpen(true)
-      e.stopPropagation()
+  const handleOpenLink = (e: React.MouseEvent, url: string) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer')
     }
+  }
+
+  const handleOpenModal = (
+    e: React.MouseEvent,
+    type: 'liveCode' | 'repository'
+  ) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setAlertType(type)
+    setIsModalOpen(true)
   }
 
   const isCompanyProject = company && company.toLowerCase() !== 'personal'
@@ -55,16 +61,16 @@ const ProjectCardAnimated2 = ({ project }: ProjectCardAnimatedProps) => {
       />
 
       <div
-        onClick={handleFlip}
-        className='border-[#2A0E61] border-[2px] hover:border-cyan-400 max-w-[500px] md:h-[460px] sm:h-[420px] h-[460px] rounded-xl cursor-pointer perspective-1000 backface-hidden overflow-hidden transition-all duration-300 shadow-[0_0_15px_rgba(42,14,97,0.4)] hover:shadow-[0_0_25px_rgba(6,182,212,0.25)]'
+        className='border-[#2A0E61] border-[2px] hover:border-cyan-400 max-w-[500px] md:h-[460px] sm:h-[420px] h-[460px] rounded-xl perspective-1000 overflow-hidden transition-all duration-300 shadow-[0_0_15px_rgba(42,14,97,0.4)] hover:shadow-[0_0_25px_rgba(6,182,212,0.25)] relative'
       >
         <div
           className={`flip-card-inner w-full h-full transition-transform duration-600 transform ${
             isFlipped ? 'rotate-y-180' : ''
           }`}
         >
-          {/* CARA FRONTAL */}
+          {/* CARA FRONTAL (Click gira la tarjeta) */}
           <div
+            onClick={handleFlip}
             style={{
               backgroundImage: `url(${src})`,
               backgroundSize: src.includes('billmed-landing') ? 'contain' : 'cover',
@@ -72,7 +78,9 @@ const ProjectCardAnimated2 = ({ project }: ProjectCardAnimatedProps) => {
               backgroundPosition: 'center',
               backgroundColor: src.includes('billmed-landing') ? '#03080e' : '#030014'
             }}
-            className='w-full h-full relative flip-card-front text-white rounded-xl p-4 backface-hidden flex flex-col justify-between overflow-hidden'
+            className={`w-full h-full absolute inset-0 flip-card-front text-white rounded-xl p-4 flex flex-col justify-between overflow-hidden cursor-pointer transition-opacity duration-300 ${
+              isFlipped ? 'pointer-events-none opacity-0' : 'pointer-events-auto opacity-100 z-10'
+            }`}
           >
             {/* Badges superiores */}
             <div className='flex flex-wrap gap-2 items-center justify-between z-10 w-full'>
@@ -110,8 +118,9 @@ const ProjectCardAnimated2 = ({ project }: ProjectCardAnimatedProps) => {
             </div>
           </div>
 
-          {/* CARA TRASERA */}
+          {/* CARA TRASERA (Click NO gira la tarjeta, solo el botón Flip) */}
           <div
+            onClick={(e) => e.stopPropagation()}
             style={{
               backgroundImage: `url(${src})`,
               backgroundSize: src.includes('billmed-landing') ? 'contain' : 'cover',
@@ -119,7 +128,9 @@ const ProjectCardAnimated2 = ({ project }: ProjectCardAnimatedProps) => {
               backgroundPosition: 'center',
               backgroundColor: src.includes('billmed-landing') ? '#03080e' : '#030014'
             }}
-            className='w-full h-full relative flip-card-back text-white rounded-xl transform rotate-y-180 backface-hidden'
+            className={`w-full h-full absolute inset-0 flip-card-back text-white rounded-xl transform rotate-y-180 transition-opacity duration-300 ${
+              isFlipped ? 'pointer-events-auto opacity-100 z-20' : 'pointer-events-none opacity-0'
+            }`}
           >
             <div className='flex flex-col justify-between w-full h-full p-4 bg-[#0a051ee6] backdrop-blur-md overflow-y-auto custom-scrollbar gap-3'>
               {/* Header de la tarjeta volteada */}
@@ -130,10 +141,10 @@ const ProjectCardAnimated2 = ({ project }: ProjectCardAnimatedProps) => {
                 <button
                   type='button'
                   onClick={handleFlip}
-                  className='text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 px-2.5 py-1 rounded bg-cyan-950/40 border border-cyan-500/30 transition-colors'
+                  className='text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 px-2.5 py-1 rounded bg-cyan-950/40 border border-cyan-500/30 hover:border-cyan-400 transition-all cursor-pointer'
                   title='Volver a la portada'
                 >
-                  <span>↻</span> Flip
+                  <span>↻</span> Flip back
                 </button>
               </div>
 
@@ -167,49 +178,81 @@ const ProjectCardAnimated2 = ({ project }: ProjectCardAnimatedProps) => {
                 </div>
               </div>
 
-              {/* Botones de acción inferiores */}
-              <div className='pt-2 mt-auto border-t border-purple-500/20 flex flex-row justify-around items-center w-full gap-2'>
-                <div
-                  className='flex-1'
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    checkOpenModal(e, liveCode_state, 'liveCode')
-                  }}
-                >
-                  <div className='flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#7042f8]/20 border border-[#7042f8]/50 hover:border-cyan-400 hover:bg-cyan-950/40 transition-all justify-center group/btn'>
-                    <CardProjectLink
-                      link={liveCode}
-                      img={'/link.svg'}
-                      name='link'
-                      alert={liveCode_state}
-                      project={project}
+              {/* Botones de acción inferiores con apertura garantizada */}
+              <div className='pt-2 mt-auto border-t border-purple-500/20 flex flex-row justify-around items-center w-full gap-2 z-30'>
+                {/* Botón Live Demo / Live System */}
+                {liveCode_state ? (
+                  <button
+                    type='button'
+                    onClick={(e) => handleOpenLink(e, liveCode)}
+                    className='flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#7042f8]/30 border border-[#7042f8]/60 hover:border-cyan-400 hover:bg-cyan-950/60 transition-all group/btn cursor-pointer shadow-sm hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]'
+                  >
+                    <Image
+                      src='/link.svg'
+                      alt='Live Demo'
+                      width={18}
+                      height={18}
+                      className='object-contain group-hover/btn:scale-110 transition-transform'
                     />
-                    <span className='text-xs font-medium text-gray-200 group-hover/btn:text-cyan-300 transition-colors'>
-                      {liveCode_state ? 'Live Demo' : 'Live System'}
+                    <span className='text-xs font-semibold text-gray-200 group-hover/btn:text-cyan-300 transition-colors'>
+                      Live Demo
                     </span>
-                  </div>
-                </div>
+                  </button>
+                ) : (
+                  <button
+                    type='button'
+                    onClick={(e) => handleOpenModal(e, 'liveCode')}
+                    className='flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#7042f8]/20 border border-[#7042f8]/40 hover:border-cyan-400 hover:bg-cyan-950/40 transition-all group/btn cursor-pointer shadow-sm'
+                  >
+                    <Image
+                      src='/link.svg'
+                      alt='Live System'
+                      width={18}
+                      height={18}
+                      className='object-contain group-hover/btn:scale-110 transition-transform opacity-75'
+                    />
+                    <span className='text-xs font-semibold text-gray-300 group-hover/btn:text-cyan-300 transition-colors'>
+                      Live System
+                    </span>
+                  </button>
+                )}
 
-                <div
-                  className='flex-1'
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    checkOpenModal(e, repository_state, 'repository')
-                  }}
-                >
-                  <div className='flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#7042f8]/20 border border-[#7042f8]/50 hover:border-cyan-400 hover:bg-cyan-950/40 transition-all justify-center group/btn'>
-                    <CardProjectLink
-                      link={repository}
-                      img={'/github.svg'}
-                      name='github'
-                      alert={repository_state}
-                      project={project}
+                {/* Botón Repository / Private Repo */}
+                {repository_state ? (
+                  <button
+                    type='button'
+                    onClick={(e) => handleOpenLink(e, repository)}
+                    className='flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#7042f8]/30 border border-[#7042f8]/60 hover:border-cyan-400 hover:bg-cyan-950/60 transition-all group/btn cursor-pointer shadow-sm hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]'
+                  >
+                    <Image
+                      src='/github.svg'
+                      alt='Code Repository'
+                      width={18}
+                      height={18}
+                      className='object-contain group-hover/btn:scale-110 transition-transform'
                     />
-                    <span className='text-xs font-medium text-gray-200 group-hover/btn:text-cyan-300 transition-colors'>
-                      {repository_state ? 'Code' : 'Private Repo'}
+                    <span className='text-xs font-semibold text-gray-200 group-hover/btn:text-cyan-300 transition-colors'>
+                      Code
                     </span>
-                  </div>
-                </div>
+                  </button>
+                ) : (
+                  <button
+                    type='button'
+                    onClick={(e) => handleOpenModal(e, 'repository')}
+                    className='flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#7042f8]/20 border border-[#7042f8]/40 hover:border-cyan-400 hover:bg-cyan-950/40 transition-all group/btn cursor-pointer shadow-sm'
+                  >
+                    <Image
+                      src='/github.svg'
+                      alt='Private Repository'
+                      width={18}
+                      height={18}
+                      className='object-contain group-hover/btn:scale-110 transition-transform opacity-75'
+                    />
+                    <span className='text-xs font-semibold text-gray-300 group-hover/btn:text-cyan-300 transition-colors'>
+                      Private Repo
+                    </span>
+                  </button>
+                )}
               </div>
             </div>
           </div>
