@@ -32,30 +32,34 @@ function HeroContent() {
           className="flex flex-col gap-2 mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
         >
           <span>
-            Engineering{" "}
+            <span className="text-white [text-shadow:_-1.5px_-1.5px_0_#000,_1.5px_-1.5px_0_#000,_-1.5px_1.5px_0_#000,_1.5px_1.5px_0_#000,_0_2px_8px_rgba(0,0,0,1)]">
+              Engineering
+            </span>{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-cyan-400 to-cyan-500">
               scalable & modern
             </span>
           </span>
-          <TypingAnimation
-            textOptions={[
-              "Full-Stack Web Applications",
-              "Enterprise Healthcare Systems",
-              "Next.js & React Architectures",
-              "REST APIs & Database Solutions"
-            ]}
-            time={1800}
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-300 block min-h-[44px]"
-          />
+          <div className="min-h-[76px] sm:min-h-[80px] lg:min-h-[52px] flex items-start w-full">
+            <TypingAnimation
+              textOptions={[
+                "Full-Stack Web Applications",
+                "Enterprise Healthcare Systems",
+                "Next.js & React Architectures",
+                "REST APIs & Database Solutions"
+              ]}
+              time={1800}
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-300 block leading-tight"
+            />
+          </div>
         </motion.div>
 
-        {/* Bio Paragraph with Subtle Tech Highlights */}
+        {/* Bio Paragraph with Subtle Tech Highlights & Mobile Contrast Backdrop */}
         <motion.p
           variants={slideInFromLeft(0.6)}
-          className="text-sm sm:text-base text-gray-300 my-2 max-w-[620px] z-[20] leading-relaxed"
+          className="text-sm sm:text-base text-gray-200 my-2 max-w-[620px] z-[20] leading-relaxed p-4 sm:p-0 rounded-2xl bg-[#030014]/85 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none border border-[#7042f8]/40 sm:border-none shadow-[0_0_25px_rgba(3,0,20,0.9)] sm:shadow-none"
         >
-          I&apos;m <span className="text-white font-semibold">Juan Tomas</span> (better known as{" "}
-          <span className="text-cyan-400 font-semibold">Jordis</span>), a full-stack developer specialized in building robust, performant web applications with{" "}
+          I&apos;m <span className="text-white font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Juan Tomas</span> (better known as{" "}
+          <span className="text-cyan-400 font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Jordis</span>), a full-stack developer specialized in building robust, performant web applications with{" "}
           <span className="text-purple-300 font-medium">React</span>,{" "}
           <span className="text-cyan-300 font-medium">Next.js</span>,{" "}
           <span className="text-purple-300 font-medium">TypeScript</span>,{" "}

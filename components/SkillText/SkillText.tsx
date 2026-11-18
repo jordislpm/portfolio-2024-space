@@ -30,7 +30,7 @@ const SkillText = () => {
         className='text-[24px] sm:text-[30px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-8 mt-[5px] text-center'
       >
         <TypingAnimation
-          className='text-[22px] sm:text-[28px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-cyan-400 to-cyan-500 mb-6 text-center'
+          className='min-h-[64px] sm:min-h-[44px] flex items-center justify-center text-[22px] sm:text-[28px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-cyan-400 to-cyan-500 mb-6 text-center leading-tight'
           time={2000}
           textOptions={[
             "Clean code architecture",
