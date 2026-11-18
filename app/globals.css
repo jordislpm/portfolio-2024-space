@@ -248,3 +248,16 @@ body::-webkit-scrollbar-thumb {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-image: linear-gradient(to bottom, #a78bfa, #06b6d4, #2dd4bf);
 }
+
+/* Ocultar cualquier botón nativo de play / pausa del navegador en videos de fondo */
+video::-webkit-media-controls,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
